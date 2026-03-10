@@ -15,7 +15,8 @@ import {
   RotateCcw,
   BookOpen,
   Gamepad2,
-  Sparkles
+  Sparkles,
+  Home
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -37,8 +38,8 @@ const Header = ({ onHome }: { onHome: () => void }) => (
       className="flex items-center gap-3 cursor-pointer group"
       onClick={onHome}
     >
-      <div className="bg-emerald-500 p-2 rounded-xl text-white group-hover:scale-110 transition-transform">
-        <BookOpen size={24} />
+      <div className="bg-red-500 p-2 rounded-xl text-white group-hover:scale-110 transition-transform">
+        <Home size={24} />
       </div>
       <div>
         <h1 className="text-xl font-bold text-slate-900 leading-tight">Tin học 5</h1>
@@ -46,9 +47,11 @@ const Header = ({ onHome }: { onHome: () => void }) => (
       </div>
     </div>
     <nav className="hidden md:flex items-center gap-6">
-      <button onClick={onHome} className="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Trang chủ</button>
+      <button onClick={onHome} className="text-sm font-medium text-slate-600 hover:text-red-600 transition-colors flex items-center gap-2">
+        <Home size={16} /> Trang chủ
+      </button>
       <div className="h-4 w-px bg-slate-200" />
-      <span className="text-sm font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">Học vui - Hiểu nhanh</span>
+      <span className="text-sm font-bold text-red-600 bg-red-50 px-3 py-1 rounded-full">Học vui - Hiểu nhanh</span>
     </nav>
   </header>
 );
@@ -372,7 +375,7 @@ export default function App() {
             >
               <div className="space-y-4">
                 <h2 className="text-5xl md:text-6xl font-black tracking-tight text-slate-900">
-                  Cấu trúc <span className="text-emerald-600">Rẽ nhánh</span>
+                  Cấu trúc <span className="text-red-600">Rẽ nhánh</span>
                 </h2>
                 <p className="text-xl text-slate-500 max-w-2xl mx-auto">
                   Chào mừng các em đến với bài học tương tác! Hãy chọn một hoạt động bên dưới để bắt đầu khám phá sức mạnh của câu lệnh "Nếu... Thì...".
